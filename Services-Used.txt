@@ -1,0 +1,35 @@
+Services-Used:
+
+AWS Services Used in the Project
+
+1. Amazon VPC
+- Used to create an isolated network environment
+
+2. Subnets
+- Public subnet for Load Balancer
+- Private subnet for EC2 instances
+
+3. Amazon EC2
+- Used to host the application servers
+
+4. Application Load Balancer (ALB)
+- Distributes incoming traffic across multiple EC2 instances
+
+5. Auto Scaling
+- Automatically adjusts the number of EC2 instances based on demand
+
+6. IAM (Identity and Access Management)
+- Manages access and permissions securely
+
+7. CloudWatch
+- Monitors system performance and triggers alarms
+
+8. Amazon EBS (Elastic Block Store)
+- Provides storage for EC2 instances
+- Used for backup through snapshots
+
+9. Security Groups
+- Controls inbound and outbound traffic
+
+Conclusion:
+These AWS services work together to provide a secure, scalable, and highly available cloud architecture.

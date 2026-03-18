@@ -1,0 +1,44 @@
+Implementation-Steps:
+
+Implementation Steps for Secure Multi-Tier Cloud Architecture
+
+Step 1: Create VPC
+- Created a custom Virtual Private Cloud with CIDR block 10.0.0.0/16
+
+Step 2: Create Subnets
+- Created Public Subnet for Load Balancer
+- Created Private Subnet for EC2 instances
+
+Step 3: Configure Internet Gateway
+- Attached Internet Gateway to VPC for internet access
+
+Step 4: Launch EC2 Instances
+- Created EC2 instances using Amazon Linux
+- Installed Apache Web Server using user data script
+
+Step 5: Create Application Load Balancer
+- Configured ALB in public subnet
+- Created target group and attached EC2 instances
+
+Step 6: Configure Auto Scaling
+- Created Launch Template
+- Configured Auto Scaling Group (min: 2, max: 4)
+- Set scaling policy based on CPU utilization
+
+Step 7: Setup Monitoring
+- Enabled CloudWatch monitoring
+- Created alarms for CPU usage
+- Created dashboard for metrics
+
+Step 8: Configure Backup
+- Created EBS volumes
+- Configured snapshots for backup
+- Verified backup recovery
+
+Step 9: Security Configuration
+- Created Security Groups
+- Configured inbound and outbound rules
+- Used IAM roles for secure access
+
+Result:
+The architecture is successfully deployed with high availability, monitoring, and backup.

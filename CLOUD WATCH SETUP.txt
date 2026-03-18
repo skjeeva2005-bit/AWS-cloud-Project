@@ -1,0 +1,95 @@
+CLOUD WATCH SETUP:
+
+CloudWatch Monitoring Setup
+
+Service Used: Amazon CloudWatch
+
+Objective:
+To monitor the performance, health, and scaling behavior of EC2 instances and ensure high availability of the application.
+
+--------------------------------------------------
+
+1. Enabled Monitoring for EC2 Instance
+
+- Launched EC2 instances with monitoring enabled
+- Verified metrics like:
+  • CPU Utilization
+  • Network In/Out
+  • Disk Read/Write
+- Enabled detailed monitoring (optional for better accuracy)
+
+--------------------------------------------------
+
+2. Created CPU Utilization Alarm
+
+Steps:
+- Navigated to CloudWatch → Alarms → Create Alarm
+- Selected metric: EC2 → Per Instance Metrics → CPU Utilization
+- Set threshold:
+  • Alarm when CPU > 70%
+- Configured notification (SNS optional)
+- Named alarm: High-CPU-Alarm
+
+Purpose:
+- Detect high load on instances
+- Trigger scaling action
+
+--------------------------------------------------
+
+3. Configured Auto Scaling Trigger
+
+- Connected CloudWatch alarm to Auto Scaling Group
+- Scaling Policy:
+  • Scale Out: Add instance when CPU > 70%
+  • Scale In: Remove instance when CPU < 30%
+
+Purpose:
+- Automatically handle traffic load
+- Maintain performance and cost efficiency
+
+--------------------------------------------------
+
+4. Created CloudWatch Dashboard
+
+Steps:
+- Opened CloudWatch → Dashboards → Create Dashboard
+- Added widgets:
+  • CPU Utilization Graph
+  • Network Traffic
+  • Instance Count
+- Selected EC2 instances and Auto Scaling Group
+
+Purpose:
+- Visual monitoring in one place
+- Easy performance tracking
+
+--------------------------------------------------
+
+5. Monitored Logs (Optional)
+
+- Enabled CloudWatch Logs for EC2
+- Collected system/application logs
+
+Purpose:
+- Troubleshooting errors
+- Monitoring application behavior
+
+--------------------------------------------------
+
+6. Health Monitoring
+
+- Monitored instance status checks
+- Integrated with Load Balancer health checks
+
+Purpose:
+- Identify unhealthy instances
+- Ensure only healthy instances receive traffic
+
+--------------------------------------------------
+
+Outcome:
+
+- Real-time monitoring of EC2 instances
+- Automated scaling based on CPU usage
+- Improved application availability
+- Centralized monitoring dashboard

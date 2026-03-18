@@ -1,0 +1,36 @@
+Project-Overview :
+
+Project Name: Secure Multi-Tier Cloud Architecture with Monitoring and Backup
+
+Description:
+This project demonstrates the design and deployment of a secure and scalable multi-tier architecture using Amazon Web Services (AWS).
+
+The architecture is divided into three layers:
+1. Presentation Layer (Load Balancer)
+2. Application Layer (EC2 Instances)
+3. Data Layer (Storage and Backup)
+
+Objectives:
+- To build a highly available cloud architecture
+- To implement load balancing and auto scaling
+- To monitor system performance using CloudWatch
+- To implement backup using EBS snapshots
+
+Key Features:
+- High Availability
+- Scalability using Auto Scaling
+- Load Balancing
+- Monitoring and Alerts
+- Backup and Recovery
+
+Tools and Technologies:
+- AWS EC2
+- VPC
+- Application Load Balancer
+- Auto Scaling
+- CloudWatch
+- IAM
+- EBS
+
+Outcome:
+Successfully deployed a secure and scalable cloud architecture with monitoring and backup capabilities.
